@@ -6,6 +6,7 @@ import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
+  //test
   const { user } = props;
   return [
     {
