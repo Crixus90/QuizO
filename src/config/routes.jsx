@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HOME/HomePage";
 import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
