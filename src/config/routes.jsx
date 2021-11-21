@@ -1,12 +1,12 @@
 import { Navigate } from "react-router-dom";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HOME/HomePage";
 import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
-  //test
+  //tcvbcfbh
   const { user } = props;
   return [
     {
