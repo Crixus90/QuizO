@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 
-function Leaderboard({ handleLogout, user }) {
+function Profile({ handleLogout, user }) {
   return (
     <div>
       <Navbar handleLogout={handleLogout} user={user} />
@@ -9,4 +9,4 @@ function Leaderboard({ handleLogout, user }) {
   );
 }
 
-export default Leaderboard;
+export default Profile;

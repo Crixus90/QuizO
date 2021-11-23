@@ -1,3 +1,4 @@
+import "./auth.css";
 import React, { useState } from "react";
 import { login } from "../services/auth";
 import { useNavigate } from "react-router-dom";
@@ -32,48 +33,52 @@ export default function LogIn({ authenticate }) {
       }
       USER_HELPERS.setUserToken(res.data.accessToken);
       authenticate(res.data.user);
-      navigate(PATHS.HOMEPAGE);
+      navigate(PATHS.LANDINGPAGE);
     });
   }
 
   return (
-    <div>
-      <h1>Log In</h1>
-      <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
-        <input
-          id="input-username"
-          type="text"
-          name="username"
-          placeholder="username"
-          value={username}
-          onChange={handleInputChange}
-          required
-        />
+    <div className="grid-container">
+      <div className="auth-box">
+        <h1>Log In</h1>
+        <div className="auth-form">
+          <form onSubmit={handleFormSubmission} className="signup__form">
+            <label htmlFor="input-username">Username</label>
+            <input
+              id="input-username"
+              type="text"
+              name="username"
+              placeholder="username"
+              value={username}
+              onChange={handleInputChange}
+              required
+            />
 
-        <label htmlFor="input-password">Password</label>
-        <input
-          id="input-password"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleInputChange}
-          required
-          minLength="8"
-        />
+            <label htmlFor="input-password">Password</label>
+            <input
+              id="input-password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={handleInputChange}
+              required
+              minLength="8"
+            />
 
-        {error && (
-          <div className="error-block">
-            <p>There was an error submiting the form:</p>
-            <p>{error.message}</p>
-          </div>
-        )}
+            {error && (
+              <div className="error-block">
+                <p>There was an error submiting the form:</p>
+                <p>{error.message}</p>
+              </div>
+            )}
 
-        <button className="button__submit" type="submit">
-          Submit
-        </button>
-      </form>
+            <button className="button__submit" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

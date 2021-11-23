@@ -51,7 +51,6 @@ export default function App() {
   }
   return (
     <div className="App">
-      <Navbar handleLogout={handleLogout} user={user} />
       <Routes>
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />

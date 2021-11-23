@@ -2,16 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as PATHS from "../../utils/paths";
-import * as CONSTS from "../../utils/consts";
 
 const Navbar = (props) => {
   return (
     <nav>
-      <Link to={PATHS.HOMEPAGE} className="nav__projectName">
-        {CONSTS.CAPITALIZED_APP} - created with IronLauncher
-      </Link>
-
       <div className="nav__authLinks">
+        <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
+          Home
+        </Link>
+        <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
+          Leaderboards
+        </Link>
+        <Link to={PATHS.LANDINGPAGE} className="nav__logo">
+          QuizO
+        </Link>
+
         {props.user ? (
           <>
             <Link to={PATHS.PROTECTEDPAGE} className="authLink">

@@ -1,9 +1,11 @@
 import "./HomePage.css";
+import Navbar from "../../components/Navbar/Navbar";
+import LogIn from "../LogIn";
 
-function HomePage() {
+function HomePage({ handleLogout, user }) {
   return (
     <div className="App">
-      <h1>QuizO</h1>
+      <LogIn />
     </div>
   );
 }

@@ -1,8 +1,32 @@
-form.auth__form {
+.grid-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  width: 40%;
+  height: 50%;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 8em;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form.auth__form {
+  /* display: flex;
   justify-content: center;
   flex-direction: column;
-  align-content: center;
+  align-content: center; */
   max-width: 300px;
   margin: 0 auto;
 }
