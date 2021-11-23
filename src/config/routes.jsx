@@ -6,11 +6,12 @@ import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
+  console.log(props);
   //tcvbcfbh
   const { user } = props;
   return [
     {
-      path: PATHS.HOMEPAGE,
+      path: PATHS.LANDINGPAGE,
       element: <HomePage {...props} />,
     },
     {
