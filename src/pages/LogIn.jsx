@@ -39,45 +39,43 @@ export default function LogIn({ authenticate }) {
 
   return (
     <div className="grid-container">
+      <h1>QuizO</h1>
       <div className="auth-box">
         <h1>Log In</h1>
-        <div className="auth-form">
-          <form onSubmit={handleFormSubmission} className="signup__form">
-            <label htmlFor="input-username">Username</label>
-            <input
-              id="input-username"
-              type="text"
-              name="username"
-              placeholder="username"
-              value={username}
-              onChange={handleInputChange}
-              required
-            />
 
-            <label htmlFor="input-password">Password</label>
-            <input
-              id="input-password"
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={password}
-              onChange={handleInputChange}
-              required
-              minLength="8"
-            />
+        <form onSubmit={handleFormSubmission} className="signup__form">
+          <label htmlFor="input-username">Username</label>
+          <input
+            id="input-username"
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleInputChange}
+            required
+          />
 
-            {error && (
-              <div className="error-block">
-                <p>There was an error submiting the form:</p>
-                <p>{error.message}</p>
-              </div>
-            )}
+          <label htmlFor="input-password">Password</label>
+          <input
+            id="input-password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleInputChange}
+            required
+            minLength="8"
+          />
 
-            <button className="button__submit" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
+          {error && (
+            <div className="error-block">
+              <p>There was an error submiting the form:</p>
+              <p>{error.message}</p>
+            </div>
+          )}
+
+          <button className="button__submit" type="submit">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );
