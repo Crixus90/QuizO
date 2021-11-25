@@ -30,7 +30,7 @@
 }
 
 input {
-  width: 35%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -39,9 +39,10 @@ input {
 }
 
 .button__submit {
+  width: 25%;
   margin: 1.5em;
   border: 1px solid #ccc;
   border-radius: 25px;
-  background-color: rgba(55, 145, 252, 1);
+  background-color: #dd70f0;
   padding: 0.5em 1em;
 }
