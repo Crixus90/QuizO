@@ -1,7 +1,7 @@
 import "./auth.css";
 import React, { useState } from "react";
 import { login } from "../services/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Signup";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
@@ -38,7 +38,7 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div className="grid-container">
+    <div className="container">
       <h1>QuizO</h1>
       <div className="auth-box">
         <h1>Log In</h1>
@@ -76,6 +76,7 @@ export default function LogIn({ authenticate }) {
             Submit
           </button>
         </form>
+        <Link to={PATHS.SIGNUPPAGE}>Signup</Link>
       </div>
     </div>
   );

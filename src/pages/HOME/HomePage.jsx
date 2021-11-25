@@ -4,9 +4,9 @@ import LogIn from "../LogIn";
 
 function HomePage({ handleLogout, user }) {
   return (
-    <div className="App">
+    <>
       <LogIn />
-    </div>
+    </>
   );
 }
 

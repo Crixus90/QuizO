@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { signup } from "../services/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
@@ -41,43 +41,46 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleFormSubmission} className="auth__form">
-        <label htmlFor="input-username">Username</label>
-        <input
-          id="input-username"
-          type="text"
-          name="username"
-          placeholder="Text"
-          value={username}
-          onChange={handleInputChange}
-          required
-        />
+    <div className="container">
+      <h1>QuizO</h1>
+      <div className="auth-box">
+        <h1>Sign Up</h1>
 
-        <label htmlFor="input-password">Password</label>
-        <input
-          id="input-password"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleInputChange}
-          required
-          minLength="8"
-        />
+        <form onSubmit={handleFormSubmission} className="signup__form">
+          <label htmlFor="input-username">Username</label>
+          <input
+            id="input-username"
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleInputChange}
+            required
+          />
 
-        {error && (
-          <div className="error-block">
-            <p>There was an error submiting the form:</p>
-            <p>{error.message}</p>
-          </div>
-        )}
+          <label htmlFor="input-password">Password</label>
+          <input
+            id="input-password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleInputChange}
+            required
+            minLength="8"
+          />
 
-        <button className="button__submit" type="submit">
-          Submit
-        </button>
-      </form>
+          {error && (
+            <div className="error-block">
+              <p>There was an error submiting the form:</p>
+              <p>{error.message}</p>
+            </div>
+          )}
+
+          <button className="button__submit" type="submit">
+            Submit
+          </button>
+        </form>
+        <Link to={PATHS.LOGINPAGE}>Log In</Link>
+      </div>
     </div>
   );
 }
