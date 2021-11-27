@@ -9,8 +9,9 @@ export default function Signup({ authenticate }) {
   const [form, setForm] = useState({
     username: "",
     password: "",
+    country: "",
   });
-  const { username, password } = form;
+  const { username, password, country } = form;
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -24,6 +25,7 @@ export default function Signup({ authenticate }) {
     const credentials = {
       username,
       password,
+      country,
     };
     signup(credentials).then((res) => {
       if (!res.status) {
@@ -66,6 +68,16 @@ export default function Signup({ authenticate }) {
             onChange={handleInputChange}
             required
             minLength="8"
+          />
+
+          <label htmlFor="input-country">Country</label>
+          <input
+            id="input-country"
+            type="text"
+            name="country"
+            value={country}
+            onChange={handleInputChange}
+            required
           />
 
           {error && (

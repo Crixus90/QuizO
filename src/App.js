@@ -25,7 +25,6 @@ export default function App() {
   }, []);
 
   function handleLogout() {
-    console.log("hsdfg");
     const accessToken = USER_HELPERS.getUserToken();
     if (!accessToken) {
       setUser(null);
@@ -52,7 +51,6 @@ export default function App() {
   }
   return (
     <div className="App">
-      <Navbar user={user} handleLogout={handleLogout} />
       <Routes>
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
