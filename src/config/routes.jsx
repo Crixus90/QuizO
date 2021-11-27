@@ -12,16 +12,28 @@ const routes = (props) => {
   return [
     {
       path: PATHS.LANDINGPAGE,
-      element: <HomePage {...props} />,
+      element: user ? (
+        <HomePage {...props} />
+      ) : (
+        <Navigate to={PATHS.LOGINPAGE} replace />
+      ),
     },
     {
       path: PATHS.SIGNUPPAGE,
-      element: <Signup {...props} />,
+      element: !user ? (
+        <Signup {...props} />
+      ) : (
+        <Navigate to={PATHS.LANDINGPAGE} replace />
+      ),
     },
 
     {
       path: PATHS.LOGINPAGE,
-      element: <Login {...props} />,
+      element: !user ? (
+        <Login {...props} />
+      ) : (
+        <Navigate to={PATHS.LANDINGPAGE} replace />
+      ),
     },
     {
       path: PATHS.PROTECTEDPAGE,
