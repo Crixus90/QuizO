@@ -1,3 +1,4 @@
+import Navbar from "../../components/Navbar/Navbar";
 import "./HomePage.css";
 
 function HomePage({ user, handleLogout }) {

@@ -46,3 +46,7 @@ input {
   background-color: #dd70f0;
   padding: 0.5em 1em;
 }
+
+#countries {
+  background-color: white;
+}
