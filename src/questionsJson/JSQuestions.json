@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "How can you get the total number of arguments passed to a function?",
+      "answers": [
+        {
+          "a": "Using arguments.length property",
+          "isCorrect": true
+        },
+        {
+          "b": "None of the answers are correct.",
+          "isCorrect": false
+        },
+        {
+          "c": "You can use both.",
+          "isCorrect": false
+        },
+        {
+          "d": "Using args.length property",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

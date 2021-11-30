@@ -21,6 +21,7 @@ export default function Signup({ authenticate }) {
   }
 
   function handleFormSubmission(event) {
+    setError(null);
     event.preventDefault();
     const credentials = {
       username,
@@ -32,7 +33,7 @@ export default function Signup({ authenticate }) {
         // unsuccessful signup
         console.error("Signup was unsuccessful: ", res);
         return setError({
-          message: "Signup was unsuccessful! Please check the console.",
+          message: res.errorMessage,
         });
       }
       // successful signup
@@ -66,8 +67,8 @@ export default function Signup({ authenticate }) {
             name="password"
             value={password}
             onChange={handleInputChange}
-            required
-            minLength="8"
+            // required
+            // minLength="8"
           />
 
           <label htmlFor="input-country">Country</label>

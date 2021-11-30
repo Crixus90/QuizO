@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as PATHS from "../../utils/paths";
+import { useUser } from "../../Context/UserContext";
 
-const Navbar = (props) => {
+const Navbar = () => {
+  const { user, handleLogout } = useUser();
   return (
     <nav>
       <div className="nav__authLinks">
@@ -17,12 +19,12 @@ const Navbar = (props) => {
           QuizO
         </Link>
 
-        {props.user ? (
+        {user ? (
           <>
             <Link to={PATHS.PROFILE} className="authLink">
               Profile
             </Link>
-            <button className="nav-logoutbtn" onClick={props.handleLogout}>
+            <button className="nav-logoutbtn" onClick={handleLogout}>
               Logout
             </button>
           </>

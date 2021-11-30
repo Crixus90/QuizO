@@ -4,6 +4,7 @@ import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import Profile from "../pages/PROFILE/Profile";
 import * as PATHS from "../utils/paths";
+import Game from "../pages/GAME/Game";
 
 const routes = (props) => {
   console.log(props);
@@ -12,11 +13,7 @@ const routes = (props) => {
   return [
     {
       path: PATHS.LANDINGPAGE,
-      element: user ? (
-        <HomePage {...props} />
-      ) : (
-        <Navigate to={PATHS.LOGINPAGE} replace />
-      ),
+      element: user ? <HomePage /> : <Navigate to={PATHS.LOGINPAGE} replace />,
     },
     {
       path: PATHS.SIGNUPPAGE,
@@ -42,6 +39,10 @@ const routes = (props) => {
       ) : (
         <Navigate to={PATHS.LOGINPAGE} replace />
       ),
+    },
+    {
+      path: PATHS.GAMEPAGE,
+      element: user ? <Game /> : <Navigate to={PATHS.LOGINPAGE} replace />,
     },
   ];
 };
