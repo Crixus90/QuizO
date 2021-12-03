@@ -1,0 +1,5 @@
+.nav__authLinks {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+}

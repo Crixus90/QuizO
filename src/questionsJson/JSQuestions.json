@@ -1,25 +1,79 @@
 {
-  "questions": [
+  "js": [
     {
       "question": "How can you get the total number of arguments passed to a function?",
-      "answers": [
-        {
-          "a": "Using arguments.length property",
+      "answer": {
+        "a": {
+          "value": "Using arguments.length property",
           "isCorrect": true
         },
-        {
-          "b": "None of the answers are correct.",
-          "isCorrect": false
+        "b": {
+          "value": "Using adgfhgfhgfroperty"
         },
-        {
-          "c": "You can use both.",
-          "isCorrect": false
+        "c": {
+          "value": "Using argumefghgfhgfh property"
         },
-        {
-          "d": "Using args.length property",
-          "isCorrect": false
+        "d": {
+          "value": "Using argty"
         }
-      ]
+      }
+    },
+    {
+      "question": "How can yfdgdfgdfts passed to a function?",
+      "answer": {
+        "a": {
+          "value": "Using argudfgdfgroperty"
+        },
+        "b": {
+          "value": "Usingdfgdgffroperty",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Using adfgdfggfh property"
+        },
+        "d": {
+          "value": "Using argty"
+        }
+      }
+    }
+  ],
+
+  "css": [
+    {
+      "question": "IS CSS HATEFUL?",
+      "answer": {
+        "a": {
+          "value": "Using arguments.length property",
+          "isCorrect": true
+        },
+        "b": {
+          "value": "Using adgfhgfhgfroperty"
+        },
+        "c": {
+          "value": "Using argumefghgfhgfh property"
+        },
+        "d": {
+          "value": "Using argty"
+        }
+      }
+    },
+    {
+      "question": "How can yfdgdfgdfts passed to a function?",
+      "answer": {
+        "a": {
+          "value": "Using argudfgdfgroperty"
+        },
+        "b": {
+          "value": "Usingdfgdgffroperty",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Using adfgdfggfh property"
+        },
+        "d": {
+          "value": "Using argty"
+        }
+      }
     }
   ]
 }
