@@ -6,18 +6,35 @@ const questionsServices = axios.create({
   baseURL: `${process.env.REACT_APP_SERVER_URL}/questions`,
 });
 
-export function createQuestions({ answerA }) {
+export function createQuestions({
+  category,
+  question,
+  answerA,
+  answerB,
+  answerC,
+  answerD,
+}) {
   return questionsServices
-    .post("/", {
-      headers: {
-        Authorization: USER_HELPERS.getUserToken(),
-        data: answerA,
+    .post(
+      "/",
+      {
+        data: category,
+        question,
+        answerA,
+        answerB,
+        answerC,
+        answerD,
       },
-    })
+      {
+        headers: {
+          Authorization: USER_HELPERS.getUserToken(),
+        },
+      }
+    )
+
     .then((res) => {
       return {
         status: true,
-        data: res.data,
       };
     })
     .catch((err) => {

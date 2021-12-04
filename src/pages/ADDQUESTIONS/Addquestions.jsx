@@ -36,7 +36,6 @@ function Addquestions() {
       answerD,
     };
     createQuestions(questionAndAnswer).then((res) => {
-      console.log(res);
       return {
         category,
         question,
