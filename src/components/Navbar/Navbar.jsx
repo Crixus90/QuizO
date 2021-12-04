@@ -10,9 +10,6 @@ const Navbar = () => {
     <nav>
       <div className="nav__authLinks">
         <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
-          Home
-        </Link>
-        <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
           Leaderboards
         </Link>
         <Link to={PATHS.LANDINGPAGE} className="nav__logo">
@@ -24,9 +21,16 @@ const Navbar = () => {
             <Link to={PATHS.PROFILE} className="authLink">
               Profile
             </Link>
-            <button className="nav-logoutbtn" onClick={handleLogout}>
+            <Link
+              to={PATHS.LOGINPAGE}
+              className="authLink"
+              onClick={handleLogout}
+            >
               Logout
-            </button>
+            </Link>
+            {/* <button className="nav-logoutbtn" onClick={handleLogout}>
+              Logout
+            </button> */}
           </>
         ) : (
           <>

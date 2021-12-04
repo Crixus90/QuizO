@@ -1,12 +1,22 @@
+import Category from "../../components/CATEGORIES/Category";
 import Navbar from "../../components/Navbar/Navbar";
 import "./HomePage.css";
 
 function HomePage() {
   return (
-    <>
-      <h1>You're here</h1>
+    <div className="home">
       <Navbar />
-    </>
+      <div className="cat-container">
+        {[
+          { title: "JS", value: "js" },
+          { title: "React", value: "react" },
+          { title: "CSS", value: "css" },
+          { title: "HTML", value: "html" },
+        ].map((e) => (
+          <Category key={e.value} {...e} />
+        ))}
+      </div>
+    </div>
   );
 }
 

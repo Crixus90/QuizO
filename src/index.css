@@ -4,7 +4,7 @@
 :root {
   --main-f-color: rgb(255, 255, 255);
   --sub-f-color: black;
-
+  --main-f-size: 2em;
   --navfont: 32px;
 }
 
@@ -35,7 +35,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--sub-f-color);
+  color: var(--main-f-color);
 }
 
 code {

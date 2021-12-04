@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import GlobalUserData from "./Context/UserContext";
+import GameWrapper from "./Context/GameContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalUserData>
-        <App />
+        <GameWrapper>
+          <App />
+        </GameWrapper>
       </GlobalUserData>
     </BrowserRouter>
   </React.StrictMode>,
