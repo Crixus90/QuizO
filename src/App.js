@@ -5,6 +5,7 @@ import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
 import { useUser } from "./Context/UserContext";
+import "./App.css";
 
 export default function App() {
   const { isLoading, user, authenticate, handleLogout } = useUser();
@@ -12,7 +13,7 @@ export default function App() {
     return <LoadingComponent />;
   }
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />

@@ -4,9 +4,8 @@
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 2em;
+  width: 100%;
 }
-
 .container > h1 {
   padding-bottom: 1em;
   font-size: clamp(60px, 10vw, 70px);
@@ -22,31 +21,37 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-bottom: 3em;
+  padding: 1em;
 }
-
 .auth-box > h1 {
-  font-size: clamp(40px, 5vw, 50px);
+  padding-bottom: 1em;
+  font-size: clamp(30px, 10vw, 50px);
 }
 
-input {
-  width: 45%;
+.signup__form {
+  width: 100%;
+}
+
+.signup__form input {
+  width: 70%;
+  height: 30px;
+  margin: 0.5em 0;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+label {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 25px;
+  justify-content: center;
 }
-
-.button__submit {
-  width: 25%;
-  margin: 1.5em;
-  border: 1px solid #ccc;
+button[type="submit"] {
+  font-family: "Fredoka One", cursive;
+  width: 40%;
+  height: 30px;
+  margin: 0.5em 0;
   border-radius: 25px;
-  background-color: #dd70f0;
-  padding: 0.5em 1em;
-}
-
-#countries {
-  background-color: white;
+  border: 1px solid #ccc;
+  background: linear-gradient(-45deg, #583bd6, #478561, #6567e4);
+  background-size: 400% 400%;
+  animation: GradientLoop 10s ease infinite;
 }

@@ -53,7 +53,6 @@ export default function LogIn({ authenticate }) {
             onChange={handleInputChange}
             required
           />
-
           <label htmlFor="input-password">Password</label>
           <input
             id="input-password"
