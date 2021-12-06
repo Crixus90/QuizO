@@ -5,6 +5,7 @@ import Signup from "../pages/Signup";
 import Profile from "../pages/PROFILE/Profile";
 import * as PATHS from "../utils/paths";
 import Game from "../pages/GAME/Game";
+import Addquestions from "../pages/ADDQUESTIONS/Addquestions";
 
 const routes = (props) => {
   console.log(props);
@@ -43,6 +44,14 @@ const routes = (props) => {
     {
       path: PATHS.GAMEPAGE,
       element: user ? <Game /> : <Navigate to={PATHS.LOGINPAGE} replace />,
+    },
+    {
+      path: PATHS.QUESTIONSPAGE,
+      element: !user ? (
+        <Login {...props} />
+      ) : (
+        <Addquestions to={PATHS.QUESTIONSPAGE} replace />
+      ),
     },
   ];
 };

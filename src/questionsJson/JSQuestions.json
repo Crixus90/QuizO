@@ -8,31 +8,355 @@
           "isCorrect": true
         },
         "b": {
-          "value": "Using adgfhgfhgfroperty"
+          "value": "Using args.length property"
         },
         "c": {
-          "value": "Using argumefghgfhgfh property"
+          "value": "You can use both."
         },
         "d": {
-          "value": "Using argty"
+          "value": "None of the answers are correct."
         }
       }
     },
     {
-      "question": "How can yfdgdfgdfts passed to a function?",
+      "question": "Which of the following is true about variable naming conventions in JavaScript?",
       "answer": {
         "a": {
-          "value": "Using argudfgdfgroperty"
+          "value": "JavaScript variable names must begin with a letter or the underscore character."
         },
         "b": {
-          "value": "Usingdfgdgffroperty",
+          "value": "Both of the answers are correct.",
           "isCorrect": true
         },
         "c": {
-          "value": "Using adfgdfggfh property"
+          "value": "JavaScript variable names are case sensitive."
         },
         "d": {
-          "value": "Using argty"
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following type of variable is visible only within a function where it is defined?",
+      "answer": {
+        "a": {
+          "value": "Global variable"
+        },
+        "b": {
+          "value": "Local variable",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Neither are visible."
+        },
+        "d": {
+          "value": "Global and local variables"
+        }
+      }
+    },
+    {
+      "question": "Which built-in method reverses the order of the elements of an array?",
+      "answer": {
+        "a": {
+          "value": "changeOrder(order)"
+        },
+        "b": {
+          "value": "reverse()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "sort(order)"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?",
+      "answer": {
+        "a": {
+          "value": "charAt()"
+        },
+        "b": {
+          "value": "charCodeAt()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "concat()"
+        },
+        "d": {
+          "value": "indexOf()"
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "answer": {
+        "a": {
+          "value": "lastIndexOf()"
+        },
+        "b": {
+          "value": "indexOf()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "search()"
+        },
+        "d": {
+          "value": "substr()"
+        }
+      }
+    },
+    {
+      "question": "What is the correct file extension for Javascript files?",
+      "answer": {
+        "a": {
+          "value": ".java"
+        },
+        "b": {
+          "value": ".js",
+          "isCorrect": true
+        },
+        "c": {
+          "value": ".javascript"
+        },
+        "d": {
+          "value": ".script"
+        }
+      }
+    },
+    {
+      "question": "What is = used for?",
+      "answer": {
+        "a": {
+          "value": "It is used for comparing two variables"
+        },
+        "b": {
+          "value": "It is used for assigning values to a variable.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "It's two parallel lines.. duh."
+        },
+        "d": {
+          "value": "It is used for comparing two variables and their datatypes."
+        }
+      }
+    },
+    {
+      "question": "Which of the following functions is a valid type of function that javascript supports?",
+      "answer": {
+        "a": {
+          "value": "named function"
+        },
+        "b": {
+          "value": "Both are true.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "anonymous function"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which method returns the string starting at the specified position?",
+      "answer": {
+        "a": {
+          "value": "getSubstring()"
+        },
+        "b": {
+          "value": "substr()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "slice()"
+        },
+        "d": {
+          "value": "sliceString()"
+        }
+      }
+    },
+    {
+      "question": "How would you call a function named 'sum'?",
+      "answer": {
+        "a": {
+          "value": "call function sum()"
+        },
+        "b": {
+          "value": "sum()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "call sum()"
+        },
+        "d": {
+          "value": "sum(call)"
+        }
+      }
+    },
+    {
+      "question": "How do you find the greatest value of 'a' and 'b'?",
+      "answer": {
+        "a": {
+          "value": "Math.ceil(a, b)"
+        },
+        "b": {
+          "value": "Math.max(a, b)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "ceil(a, b)"
+        },
+        "d": {
+          "value": "top(a, b)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “while” loop?",
+      "answer": {
+        "a": {
+          "value": "while i = 1 to 5"
+        },
+        "b": {
+          "value": "while (i <= 5)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "while (i <= 5; i++)"
+        },
+        "d": {
+          "value": "while (i=0; i <= 5; i++)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “for” loop?",
+      "answer": {
+        "a": {
+          "value": "for (i = 0; i <= 10)"
+        },
+        "b": {
+          "value": "for (i = 0; i <= 10; i++)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "for i = 1 to 10"
+        },
+        "d": {
+          "value": "for (i <= 10; i++)"
+        }
+      }
+    },
+    {
+      "question": "How do you get a random number between 5 and 9 inclusive?",
+      "answer": {
+        "a": {
+          "value": "Math.floor((Math.random() * 4) + 5);"
+        },
+        "b": {
+          "value": "Math.floor((Math.random() * 5) + 5);",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Math.floor((Math.random() * 4) + 4);"
+        },
+        "d": {
+          "value": "Math.floor((Math.random() * 5) + 4);"
+        }
+      }
+    },
+    {
+      "question": "How do you check if three variables are equal?",
+      "answer": {
+        "a": {
+          "value": "(X == B) && (Y == Z)"
+        },
+        "b": {
+          "value": "X = Y = Z",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "(X = B) && (Y = Z)"
+        },
+        "d": {
+          "value": "(X == B) & (Y == Z)"
+        }
+      }
+    },
+    {
+      "question": "How many parameters can be passed to a function?",
+      "answer": {
+        "a": {
+          "value": "As many as you want."
+        },
+        "b": {
+          "value": "One for each argument",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Parameters can't be passed to a function."
+        },
+        "d": {
+          "value": "Maximum of 4."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is not a property of the window object?",
+      "answer": {
+        "a": {
+          "value": "document"
+        },
+        "b": {
+          "value": "menu",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "navigator"
+        },
+        "d": {
+          "value": "history"
+        }
+      }
+    },
+    {
+      "question": "Which of these is not a comparison operator?",
+      "answer": {
+        "a": {
+          "value": ">"
+        },
+        "b": {
+          "value": "=",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "!="
+        },
+        "d": {
+          "value": ">"
+        }
+      }
+    },
+    {
+      "question": "Which of the following would output 'hello' to the console?",
+      "answer": {
+        "a": {
+          "value": "consolelog(hello);"
+        },
+        "b": {
+          "value": "console.log('hello');",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "log thy console ('hello')"
+        },
+        "d": {
+          "value": "consolelog = 'hello';"
         }
       }
     }
@@ -40,38 +364,1088 @@
 
   "css": [
     {
-      "question": "IS CSS HATEFUL?",
+      "question": "The CSS property used to control the element's font-size is -",
+      "answer": {
+        "a": {
+          "value": "font-size",
+          "isCorrect": true
+        },
+        "b": {
+          "value": "Using args.length property"
+        },
+        "c": {
+          "value": "You can use both."
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is true about variable naming conventions in JavaScript?",
+      "answer": {
+        "a": {
+          "value": "JavaScript variable names must begin with a letter or the underscore character."
+        },
+        "b": {
+          "value": "Both of the answers are correct.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "JavaScript variable names are case sensitive."
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following type of variable is visible only within a function where it is defined?",
+      "answer": {
+        "a": {
+          "value": "Global variable"
+        },
+        "b": {
+          "value": "Local variable",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Neither are visible."
+        },
+        "d": {
+          "value": "Global and local variables"
+        }
+      }
+    },
+    {
+      "question": "Which built-in method reverses the order of the elements of an array?",
+      "answer": {
+        "a": {
+          "value": "changeOrder(order)"
+        },
+        "b": {
+          "value": "reverse()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "sort(order)"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?",
+      "answer": {
+        "a": {
+          "value": "charAt()"
+        },
+        "b": {
+          "value": "charCodeAt()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "concat()"
+        },
+        "d": {
+          "value": "indexOf()"
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "answer": {
+        "a": {
+          "value": "lastIndexOf()"
+        },
+        "b": {
+          "value": "indexOf()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "search()"
+        },
+        "d": {
+          "value": "substr()"
+        }
+      }
+    },
+    {
+      "question": "What is the correct file extension for Javascript files?",
+      "answer": {
+        "a": {
+          "value": ".java"
+        },
+        "b": {
+          "value": ".js",
+          "isCorrect": true
+        },
+        "c": {
+          "value": ".javascript"
+        },
+        "d": {
+          "value": ".script"
+        }
+      }
+    },
+    {
+      "question": "What is = used for?",
+      "answer": {
+        "a": {
+          "value": "It is used for comparing two variables"
+        },
+        "b": {
+          "value": "It is used for assigning values to a variable.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "It's two parallel lines.. duh."
+        },
+        "d": {
+          "value": "It is used for comparing two variables and their datatypes."
+        }
+      }
+    },
+    {
+      "question": "Which of the following functions is a valid type of function that javascript supports?",
+      "answer": {
+        "a": {
+          "value": "named function"
+        },
+        "b": {
+          "value": "Both are true.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "anonymous function"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which method returns the string starting at the specified position?",
+      "answer": {
+        "a": {
+          "value": "getSubstring()"
+        },
+        "b": {
+          "value": "substr()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "slice()"
+        },
+        "d": {
+          "value": "sliceString()"
+        }
+      }
+    },
+    {
+      "question": "How would you call a function named 'sum'?",
+      "answer": {
+        "a": {
+          "value": "call function sum()"
+        },
+        "b": {
+          "value": "sum()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "call sum()"
+        },
+        "d": {
+          "value": "sum(call)"
+        }
+      }
+    },
+    {
+      "question": "How do you find the greatest value of 'a' and 'b'?",
+      "answer": {
+        "a": {
+          "value": "Math.ceil(a, b)"
+        },
+        "b": {
+          "value": "Math.max(a, b)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "ceil(a, b)"
+        },
+        "d": {
+          "value": "top(a, b)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “while” loop?",
+      "answer": {
+        "a": {
+          "value": "while i = 1 to 5"
+        },
+        "b": {
+          "value": "while (i <= 5)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "while (i <= 5; i++)"
+        },
+        "d": {
+          "value": "while (i=0; i <= 5; i++)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “for” loop?",
+      "answer": {
+        "a": {
+          "value": "for (i = 0; i <= 10)"
+        },
+        "b": {
+          "value": "for (i = 0; i <= 10; i++)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "for i = 1 to 10"
+        },
+        "d": {
+          "value": "for (i <= 10; i++)"
+        }
+      }
+    },
+    {
+      "question": "How do you get a random number between 5 and 9 inclusive?",
+      "answer": {
+        "a": {
+          "value": "Math.floor((Math.random() * 4) + 5);"
+        },
+        "b": {
+          "value": "Math.floor((Math.random() * 5) + 5);",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Math.floor((Math.random() * 4) + 4);"
+        },
+        "d": {
+          "value": "Math.floor((Math.random() * 5) + 4);"
+        }
+      }
+    },
+    {
+      "question": "How do you check if three variables are equal?",
+      "answer": {
+        "a": {
+          "value": "(X == B) && (Y == Z)"
+        },
+        "b": {
+          "value": "X = Y = Z",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "(X = B) && (Y = Z)"
+        },
+        "d": {
+          "value": "(X == B) & (Y == Z)"
+        }
+      }
+    },
+    {
+      "question": "How many parameters can be passed to a function?",
+      "answer": {
+        "a": {
+          "value": "As many as you want."
+        },
+        "b": {
+          "value": "One for each argument",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Parameters can't be passed to a function."
+        },
+        "d": {
+          "value": "Maximum of 4."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is not a property of the window object?",
+      "answer": {
+        "a": {
+          "value": "document"
+        },
+        "b": {
+          "value": "menu",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "navigator"
+        },
+        "d": {
+          "value": "history"
+        }
+      }
+    },
+    {
+      "question": "Which of these is not a comparison operator?",
+      "answer": {
+        "a": {
+          "value": ">"
+        },
+        "b": {
+          "value": "=",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "!="
+        },
+        "d": {
+          "value": ">"
+        }
+      }
+    },
+    {
+      "question": "Which of the following would output 'hello' to the console?",
+      "answer": {
+        "a": {
+          "value": "consolelog(hello);"
+        },
+        "b": {
+          "value": "console.log('hello');",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "log thy console ('hello')"
+        },
+        "d": {
+          "value": "consolelog = 'hello';"
+        }
+      }
+    }
+  ],
+
+  "html": [
+    {
+      "question": "How can you get the total number of arguments passed to a function?",
       "answer": {
         "a": {
           "value": "Using arguments.length property",
           "isCorrect": true
         },
         "b": {
-          "value": "Using adgfhgfhgfroperty"
+          "value": "Using args.length property"
         },
         "c": {
-          "value": "Using argumefghgfhgfh property"
+          "value": "You can use both."
         },
         "d": {
-          "value": "Using argty"
+          "value": "None of the answers are correct."
         }
       }
     },
     {
-      "question": "How can yfdgdfgdfts passed to a function?",
+      "question": "Which of the following is true about variable naming conventions in JavaScript?",
       "answer": {
         "a": {
-          "value": "Using argudfgdfgroperty"
+          "value": "JavaScript variable names must begin with a letter or the underscore character."
         },
         "b": {
-          "value": "Usingdfgdgffroperty",
+          "value": "Both of the answers are correct.",
           "isCorrect": true
         },
         "c": {
-          "value": "Using adfgdfggfh property"
+          "value": "JavaScript variable names are case sensitive."
         },
         "d": {
-          "value": "Using argty"
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following type of variable is visible only within a function where it is defined?",
+      "answer": {
+        "a": {
+          "value": "Global variable"
+        },
+        "b": {
+          "value": "Local variable",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Neither are visible."
+        },
+        "d": {
+          "value": "Global and local variables"
+        }
+      }
+    },
+    {
+      "question": "Which built-in method reverses the order of the elements of an array?",
+      "answer": {
+        "a": {
+          "value": "changeOrder(order)"
+        },
+        "b": {
+          "value": "reverse()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "sort(order)"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?",
+      "answer": {
+        "a": {
+          "value": "charAt()"
+        },
+        "b": {
+          "value": "charCodeAt()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "concat()"
+        },
+        "d": {
+          "value": "indexOf()"
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "answer": {
+        "a": {
+          "value": "lastIndexOf()"
+        },
+        "b": {
+          "value": "indexOf()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "search()"
+        },
+        "d": {
+          "value": "substr()"
+        }
+      }
+    },
+    {
+      "question": "What is the correct file extension for Javascript files?",
+      "answer": {
+        "a": {
+          "value": ".java"
+        },
+        "b": {
+          "value": ".js",
+          "isCorrect": true
+        },
+        "c": {
+          "value": ".javascript"
+        },
+        "d": {
+          "value": ".script"
+        }
+      }
+    },
+    {
+      "question": "What is = used for?",
+      "answer": {
+        "a": {
+          "value": "It is used for comparing two variables"
+        },
+        "b": {
+          "value": "It is used for assigning values to a variable.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "It's two parallel lines.. duh."
+        },
+        "d": {
+          "value": "It is used for comparing two variables and their datatypes."
+        }
+      }
+    },
+    {
+      "question": "Which of the following functions is a valid type of function that javascript supports?",
+      "answer": {
+        "a": {
+          "value": "named function"
+        },
+        "b": {
+          "value": "Both are true.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "anonymous function"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which method returns the string starting at the specified position?",
+      "answer": {
+        "a": {
+          "value": "getSubstring()"
+        },
+        "b": {
+          "value": "substr()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "slice()"
+        },
+        "d": {
+          "value": "sliceString()"
+        }
+      }
+    },
+    {
+      "question": "How would you call a function named 'sum'?",
+      "answer": {
+        "a": {
+          "value": "call function sum()"
+        },
+        "b": {
+          "value": "sum()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "call sum()"
+        },
+        "d": {
+          "value": "sum(call)"
+        }
+      }
+    },
+    {
+      "question": "How do you find the greatest value of 'a' and 'b'?",
+      "answer": {
+        "a": {
+          "value": "Math.ceil(a, b)"
+        },
+        "b": {
+          "value": "Math.max(a, b)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "ceil(a, b)"
+        },
+        "d": {
+          "value": "top(a, b)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “while” loop?",
+      "answer": {
+        "a": {
+          "value": "while i = 1 to 5"
+        },
+        "b": {
+          "value": "while (i <= 5)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "while (i <= 5; i++)"
+        },
+        "d": {
+          "value": "while (i=0; i <= 5; i++)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “for” loop?",
+      "answer": {
+        "a": {
+          "value": "for (i = 0; i <= 10)"
+        },
+        "b": {
+          "value": "for (i = 0; i <= 10; i++)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "for i = 1 to 10"
+        },
+        "d": {
+          "value": "for (i <= 10; i++)"
+        }
+      }
+    },
+    {
+      "question": "How do you get a random number between 5 and 9 inclusive?",
+      "answer": {
+        "a": {
+          "value": "Math.floor((Math.random() * 4) + 5);"
+        },
+        "b": {
+          "value": "Math.floor((Math.random() * 5) + 5);",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Math.floor((Math.random() * 4) + 4);"
+        },
+        "d": {
+          "value": "Math.floor((Math.random() * 5) + 4);"
+        }
+      }
+    },
+    {
+      "question": "How do you check if three variables are equal?",
+      "answer": {
+        "a": {
+          "value": "(X == B) && (Y == Z)"
+        },
+        "b": {
+          "value": "X = Y = Z",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "(X = B) && (Y = Z)"
+        },
+        "d": {
+          "value": "(X == B) & (Y == Z)"
+        }
+      }
+    },
+    {
+      "question": "How many parameters can be passed to a function?",
+      "answer": {
+        "a": {
+          "value": "As many as you want."
+        },
+        "b": {
+          "value": "One for each argument",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Parameters can't be passed to a function."
+        },
+        "d": {
+          "value": "Maximum of 4."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is not a property of the window object?",
+      "answer": {
+        "a": {
+          "value": "document"
+        },
+        "b": {
+          "value": "menu",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "navigator"
+        },
+        "d": {
+          "value": "history"
+        }
+      }
+    },
+    {
+      "question": "Which of these is not a comparison operator?",
+      "answer": {
+        "a": {
+          "value": ">"
+        },
+        "b": {
+          "value": "=",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "!="
+        },
+        "d": {
+          "value": ">"
+        }
+      }
+    },
+    {
+      "question": "Which of the following would output 'hello' to the console?",
+      "answer": {
+        "a": {
+          "value": "consolelog(hello);"
+        },
+        "b": {
+          "value": "console.log('hello');",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "log thy console ('hello')"
+        },
+        "d": {
+          "value": "consolelog = 'hello';"
+        }
+      }
+    }
+  ],
+
+  "react": [
+    {
+      "question": "How can you get the total number of arguments passed to a function?",
+      "answer": {
+        "a": {
+          "value": "Using arguments.length property",
+          "isCorrect": true
+        },
+        "b": {
+          "value": "Using args.length property"
+        },
+        "c": {
+          "value": "You can use both."
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is true about variable naming conventions in JavaScript?",
+      "answer": {
+        "a": {
+          "value": "JavaScript variable names must begin with a letter or the underscore character."
+        },
+        "b": {
+          "value": "Both of the answers are correct.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "JavaScript variable names are case sensitive."
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following type of variable is visible only within a function where it is defined?",
+      "answer": {
+        "a": {
+          "value": "Global variable"
+        },
+        "b": {
+          "value": "Local variable",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Neither are visible."
+        },
+        "d": {
+          "value": "Global and local variables"
+        }
+      }
+    },
+    {
+      "question": "Which built-in method reverses the order of the elements of an array?",
+      "answer": {
+        "a": {
+          "value": "changeOrder(order)"
+        },
+        "b": {
+          "value": "reverse()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "sort(order)"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?",
+      "answer": {
+        "a": {
+          "value": "charAt()"
+        },
+        "b": {
+          "value": "charCodeAt()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "concat()"
+        },
+        "d": {
+          "value": "indexOf()"
+        }
+      }
+    },
+    {
+      "question": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "answer": {
+        "a": {
+          "value": "lastIndexOf()"
+        },
+        "b": {
+          "value": "indexOf()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "search()"
+        },
+        "d": {
+          "value": "substr()"
+        }
+      }
+    },
+    {
+      "question": "What is the correct file extension for Javascript files?",
+      "answer": {
+        "a": {
+          "value": ".java"
+        },
+        "b": {
+          "value": ".js",
+          "isCorrect": true
+        },
+        "c": {
+          "value": ".javascript"
+        },
+        "d": {
+          "value": ".script"
+        }
+      }
+    },
+    {
+      "question": "What is = used for?",
+      "answer": {
+        "a": {
+          "value": "It is used for comparing two variables"
+        },
+        "b": {
+          "value": "It is used for assigning values to a variable.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "It's two parallel lines.. duh."
+        },
+        "d": {
+          "value": "It is used for comparing two variables and their datatypes."
+        }
+      }
+    },
+    {
+      "question": "Which of the following functions is a valid type of function that javascript supports?",
+      "answer": {
+        "a": {
+          "value": "named function"
+        },
+        "b": {
+          "value": "Both are true.",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "anonymous function"
+        },
+        "d": {
+          "value": "None of the answers are correct."
+        }
+      }
+    },
+    {
+      "question": "Which method returns the string starting at the specified position?",
+      "answer": {
+        "a": {
+          "value": "getSubstring()"
+        },
+        "b": {
+          "value": "substr()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "slice()"
+        },
+        "d": {
+          "value": "sliceString()"
+        }
+      }
+    },
+    {
+      "question": "How would you call a function named 'sum'?",
+      "answer": {
+        "a": {
+          "value": "call function sum()"
+        },
+        "b": {
+          "value": "sum()",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "call sum()"
+        },
+        "d": {
+          "value": "sum(call)"
+        }
+      }
+    },
+    {
+      "question": "How do you find the greatest value of 'a' and 'b'?",
+      "answer": {
+        "a": {
+          "value": "Math.ceil(a, b)"
+        },
+        "b": {
+          "value": "Math.max(a, b)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "ceil(a, b)"
+        },
+        "d": {
+          "value": "top(a, b)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “while” loop?",
+      "answer": {
+        "a": {
+          "value": "while i = 1 to 5"
+        },
+        "b": {
+          "value": "while (i <= 5)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "while (i <= 5; i++)"
+        },
+        "d": {
+          "value": "while (i=0; i <= 5; i++)"
+        }
+      }
+    },
+    {
+      "question": "What is the correct syntax of the “for” loop?",
+      "answer": {
+        "a": {
+          "value": "for (i = 0; i <= 10)"
+        },
+        "b": {
+          "value": "for (i = 0; i <= 10; i++)",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "for i = 1 to 10"
+        },
+        "d": {
+          "value": "for (i <= 10; i++)"
+        }
+      }
+    },
+    {
+      "question": "How do you get a random number between 5 and 9 inclusive?",
+      "answer": {
+        "a": {
+          "value": "Math.floor((Math.random() * 4) + 5);"
+        },
+        "b": {
+          "value": "Math.floor((Math.random() * 5) + 5);",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Math.floor((Math.random() * 4) + 4);"
+        },
+        "d": {
+          "value": "Math.floor((Math.random() * 5) + 4);"
+        }
+      }
+    },
+    {
+      "question": "How do you check if three variables are equal?",
+      "answer": {
+        "a": {
+          "value": "(X == B) && (Y == Z)"
+        },
+        "b": {
+          "value": "X = Y = Z",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "(X = B) && (Y = Z)"
+        },
+        "d": {
+          "value": "(X == B) & (Y == Z)"
+        }
+      }
+    },
+    {
+      "question": "How many parameters can be passed to a function?",
+      "answer": {
+        "a": {
+          "value": "As many as you want."
+        },
+        "b": {
+          "value": "One for each argument",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "Parameters can't be passed to a function."
+        },
+        "d": {
+          "value": "Maximum of 4."
+        }
+      }
+    },
+    {
+      "question": "Which of the following is not a property of the window object?",
+      "answer": {
+        "a": {
+          "value": "document"
+        },
+        "b": {
+          "value": "menu",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "navigator"
+        },
+        "d": {
+          "value": "history"
+        }
+      }
+    },
+    {
+      "question": "Which of these is not a comparison operator?",
+      "answer": {
+        "a": {
+          "value": ">"
+        },
+        "b": {
+          "value": "=",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "!="
+        },
+        "d": {
+          "value": ">"
+        }
+      }
+    },
+    {
+      "question": "Which of the following would output 'hello' to the console?",
+      "answer": {
+        "a": {
+          "value": "consolelog(hello);"
+        },
+        "b": {
+          "value": "console.log('hello');",
+          "isCorrect": true
+        },
+        "c": {
+          "value": "log thy console ('hello')"
+        },
+        "d": {
+          "value": "consolelog = 'hello';"
         }
       }
     }
