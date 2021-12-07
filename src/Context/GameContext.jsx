@@ -1,6 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import AllQuestions from "../questionsJson/JSQuestions.json";
 import { getQuestions } from "../services/questionsService";
 
 const GameContext = createContext();
@@ -12,25 +11,29 @@ export function useGame() {
 export default function GameWrapper({ children }) {
   const navigate = useNavigate();
   const [category, setCategory] = useState(null);
+  const [questions, setQuestions] = useState(null);
   console.log(category);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
 
-  const currentQuestion = category && AllQuestions[category][questionNumber];
-  console.log(currentQuestion);
+  const currentQuestion = category && questions[category]?.[questionNumber];
 
   useEffect(() => {
-    if (questionNumber && !currentQuestion) {
+    if (questionNumber && !currentQuestion && category) {
       setQuestionNumber(0);
+      setCategory("");
     }
-  }, [currentQuestion, questionNumber]);
+    if (!category) {
+      return;
+    }
 
-  useEffect(() => {
-    getQuestions().then((questions) => {
-      console.log(questions);
+    //get questions
+    getQuestions(category).then((questions) => {
+      setQuestions(questions);
+      console.log("these are the qs" + questions);
     });
     return () => {};
-  });
+  }, [currentQuestion, questionNumber, category]);
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {

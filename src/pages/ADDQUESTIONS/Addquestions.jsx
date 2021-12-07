@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import * as PATHS from "../../utils/paths";
-import { useNavigate } from "react-router-dom";
 import "./Addquestions.css";
 import { createQuestions } from "../../services/questionsService";
 import { useForm } from "react-hook-form";
