@@ -6,6 +6,15 @@ const questionsServices = axios.create({
   baseURL: `${process.env.REACT_APP_SERVER_URL}/questions`,
 });
 
+export function getQuestions() {
+  return questionsServices
+    .get("/")
+    .then((allQuestions) => {
+      console.log(allQuestions);
+    })
+    .catch();
+}
+
 export function createQuestions({
   category,
   question,
