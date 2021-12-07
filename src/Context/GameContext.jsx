@@ -1,6 +1,7 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import AllQuestions from "../questionsJson/JSQuestions.json";
+import { getQuestions } from "../services/questionsService";
 
 const GameContext = createContext();
 
@@ -23,6 +24,13 @@ export default function GameWrapper({ children }) {
       setQuestionNumber(0);
     }
   }, [currentQuestion, questionNumber]);
+
+  useEffect(() => {
+    getQuestions().then((questions) => {
+      console.log(questions);
+    });
+    return () => {};
+  });
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
