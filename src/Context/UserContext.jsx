@@ -5,7 +5,6 @@ import * as USER_HELPERS from "../utils/userToken";
 export const UserContext = createContext();
 
 export default function GlobalUserData({ children }) {
-  const [count, setCount] = useState(69);
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 

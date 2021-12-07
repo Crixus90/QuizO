@@ -12,7 +12,7 @@ const Navbar = () => {
         QuizO
       </Link>
       <div className="nav__authLinks">
-        <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
+        <Link to={PATHS.LEADERBOARDS} className="nav__projectName">
           Leaderboards
         </Link>
         {user ? (
