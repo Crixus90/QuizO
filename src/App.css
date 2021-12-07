@@ -13,10 +13,6 @@
 .app {
   color: var(--sub-f-color);
   font-family: "Fredoka One", cursive;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(-45deg, #261962, #cb00b9, #17199e);
   background-size: 400% 400%;

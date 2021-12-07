@@ -8,14 +8,13 @@ const Navbar = () => {
   const { user, handleLogout } = useUser();
   return (
     <nav>
+      <Link to={PATHS.LANDINGPAGE} className="nav__logo">
+        QuizO
+      </Link>
       <div className="nav__authLinks">
         <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
           Leaderboards
         </Link>
-        <Link to={PATHS.LANDINGPAGE} className="nav__logo">
-          QuizO
-        </Link>
-
         {user ? (
           <>
             <Link to={PATHS.PROFILE} className="authLink">
