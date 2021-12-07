@@ -18,7 +18,7 @@ export function createQuestions({
     .post(
       "/",
       {
-        data: category,
+        category,
         question,
         answerA,
         answerB,

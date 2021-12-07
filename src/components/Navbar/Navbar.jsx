@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__authLinks">
-        <Link to={PATHS.LANDINGPAGE} className="nav__projectName">
+        <Link to={PATHS.LEADERBOARDS} className="nav__projectName">
           Leaderboards
         </Link>
         <Link to={PATHS.LANDINGPAGE} className="nav__logo">

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-// import * as PATHS from "../utils/paths";
-// import { useNavigate, Link } from "react-router-dom";
+import * as PATHS from "../../utils/paths";
+import { useNavigate } from "react-router-dom";
 import "./Addquestions.css";
 import { createQuestions } from "../../services/questionsService";
+import { useForm } from "react-hook-form";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Addquestions() {
+  // const { reset } = useForm();
+  // console.log(reset);
+
   const [form, setForm] = useState({
     category: "",
     question: "",
@@ -25,7 +30,6 @@ function Addquestions() {
   }
 
   function handleFormSubmission(event) {
-    console.log("hisasda");
     event.preventDefault();
     const questionAndAnswer = {
       category,
@@ -45,17 +49,38 @@ function Addquestions() {
         answerD,
       };
     });
+
+    setForm({});
   }
 
   return (
     <>
+      <Navbar />
       <form className="signup__form" onSubmit={handleFormSubmission}>
+        <label htmlFor="input-category">Category:</label>
+        <div className="input-category">
+          <input
+            id="input-category"
+            type="text"
+            name="category"
+            list="categories"
+            value={category || ""}
+            onChange={handleInputChange}
+            required
+          />
+          <datalist id="categories">
+            <option>JS</option>
+            <option>CSS</option>
+            <option>HTML</option>
+            <option>REACT</option>
+          </datalist>
+        </div>
         <label htmlFor="input-question">Question</label>
         <input
-          id="input-username"
+          id="input-question"
           type="text"
           name="question"
-          value={question}
+          value={question || ""}
           onChange={handleInputChange}
           required
         />
@@ -63,10 +88,10 @@ function Addquestions() {
         <label htmlFor="input-answer">Correct answer:</label>
         <div className="input-questions">
           <input
-            id="input-username"
+            id="input-answer"
             type="text"
             name="answerA"
-            value={answerA}
+            value={answerA || ""}
             onChange={handleInputChange}
             required
           />
@@ -75,10 +100,10 @@ function Addquestions() {
         <label htmlFor="input-answer">Answer B:</label>
         <div className="input-questions">
           <input
-            id="input-username"
+            id="input-answerB"
             type="text"
             name="answerB"
-            value={answerB}
+            value={answerB || ""}
             onChange={handleInputChange}
             required
           />
@@ -87,10 +112,10 @@ function Addquestions() {
         <label htmlFor="input-answer">Answer C:</label>
         <div className="input-questions">
           <input
-            id="input-username"
+            id="input-answerC"
             type="text"
             name="answerC"
-            value={answerC}
+            value={answerC || ""}
             onChange={handleInputChange}
             required
           />
@@ -99,10 +124,10 @@ function Addquestions() {
         <label htmlFor="input-answer">Answer D:</label>
         <div className="input-questions">
           <input
-            id="input-username"
+            id="input-answerD"
             type="text"
             name="answerD"
-            value={answerD}
+            value={answerD || ""}
             onChange={handleInputChange}
             required
           />
