@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Addquestions.css";
 import { createQuestions } from "../../services/questionsService";
 import Navbar from "../../components/Navbar/Navbar";
@@ -14,7 +14,7 @@ function Addquestions() {
   });
 
   const { category, question, answerA, answerB, answerC, answerD } = form;
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
 
   function handleInputChange(event) {
     const { name, value } = event.target;
