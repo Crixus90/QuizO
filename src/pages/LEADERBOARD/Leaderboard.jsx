@@ -5,6 +5,7 @@ function Leaderboard({ handleLogout, user }) {
   return (
     <div>
       <Navbar handleLogout={handleLogout} user={user} />
+      <h1>test</h1>
     </div>
   );
 }

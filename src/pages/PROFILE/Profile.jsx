@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 
 function Profile({ handleLogout, user }) {
+  console.log(user);
   return (
     <div>
       <Navbar handleLogout={handleLogout} user={user} />

@@ -6,6 +6,7 @@ import Profile from "../pages/PROFILE/Profile";
 import * as PATHS from "../utils/paths";
 import Game from "../pages/GAME/Game";
 import Addquestions from "../pages/ADDQUESTIONS/Addquestions";
+import Leaderboard from "../pages/LEADERBOARD/Leaderboard";
 
 const routes = (props) => {
   console.log(props);
@@ -51,6 +52,15 @@ const routes = (props) => {
         <Login {...props} />
       ) : (
         <Addquestions to={PATHS.QUESTIONSPAGE} replace />
+      ),
+    },
+
+    {
+      path: PATHS.LEADERBOARDS,
+      element: !user ? (
+        <Login {...props} />
+      ) : (
+        <Leaderboard to={PATHS.LEADERBOARDS} replace />
       ),
     },
   ];
