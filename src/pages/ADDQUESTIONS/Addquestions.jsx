@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Addquestions.css";
 import { createQuestions } from "../../services/questionsService";
-import { useForm } from "react-hook-form";
 import Navbar from "../../components/Navbar/Navbar";
 
 function Addquestions() {
-  // const { reset } = useForm();
-  // console.log(reset);
-
   const [form, setForm] = useState({
     category: "",
     question: "",
@@ -48,7 +44,14 @@ function Addquestions() {
       };
     });
 
-    setForm({});
+    setForm({
+      category: "",
+      question: "",
+      answerA: "",
+      answerB: "",
+      answerC: "",
+      answerD: "",
+    });
   }
 
   return (
@@ -62,7 +65,7 @@ function Addquestions() {
             type="text"
             name="category"
             list="categories"
-            value={category || ""}
+            value={category}
             onChange={handleInputChange}
             required
           />
@@ -78,7 +81,7 @@ function Addquestions() {
           id="input-question"
           type="text"
           name="question"
-          value={question || ""}
+          value={question}
           onChange={handleInputChange}
           required
         />
@@ -89,7 +92,7 @@ function Addquestions() {
             id="input-answer"
             type="text"
             name="answerA"
-            value={answerA || ""}
+            value={answerA}
             onChange={handleInputChange}
             required
           />
@@ -101,7 +104,7 @@ function Addquestions() {
             id="input-answerB"
             type="text"
             name="answerB"
-            value={answerB || ""}
+            value={answerB}
             onChange={handleInputChange}
             required
           />
@@ -113,7 +116,7 @@ function Addquestions() {
             id="input-answerC"
             type="text"
             name="answerC"
-            value={answerC || ""}
+            value={answerC}
             onChange={handleInputChange}
             required
           />
@@ -125,7 +128,7 @@ function Addquestions() {
             id="input-answerD"
             type="text"
             name="answerD"
-            value={answerD || ""}
+            value={answerD}
             onChange={handleInputChange}
             required
           />
