@@ -9,7 +9,6 @@ import Addquestions from "../pages/ADDQUESTIONS/Addquestions";
 import Leaderboard from "../pages/LEADERBOARD/Leaderboard";
 
 const routes = (props) => {
-  console.log(props);
   //tcvbcfbh
   const { user } = props;
   return [

@@ -44,9 +44,19 @@ export default function GlobalUserData({ children }) {
     setUser(user);
   }
 
+  function dieMotherfuckerDie() {
+    setUser(null);
+  }
+
   return (
     <UserContext.Provider
-      value={{ user, authenticate, handleLogout, isLoading }}
+      value={{
+        user,
+        authenticate,
+        handleLogout,
+        isLoading,
+        dieMotherfuckerDie,
+      }}
     >
       {children}
     </UserContext.Provider>

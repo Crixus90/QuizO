@@ -12,14 +12,13 @@ export default function GameWrapper({ children }) {
   const navigate = useNavigate();
   const [category, setCategory] = useState(null);
   const [questions, setQuestions] = useState(null);
-  console.log(category);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
 
-  const currentQuestion = category && questions[category]?.[questionNumber];
+  const currentQuestion = category && questions?.[category]?.[questionNumber];
 
   useEffect(() => {
-    if (questionNumber && !currentQuestion && category) {
+    if (questionNumber != null && !currentQuestion && category) {
       setQuestionNumber(0);
       setCategory("");
     }
@@ -34,6 +33,10 @@ export default function GameWrapper({ children }) {
     });
     return () => {};
   }, [currentQuestion, questionNumber, category]);
+
+  console.log(category);
+  console.log(currentQuestion);
+  console.log(questionNumber);
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {

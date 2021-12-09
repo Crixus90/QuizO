@@ -28,7 +28,6 @@ export default function Signup({ authenticate }) {
       password,
       country,
     };
-    console.log(username);
     signup(credentials).then((res) => {
       if (!res.status) {
         // unsuccessful signup

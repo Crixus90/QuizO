@@ -62,3 +62,15 @@ export function logout() {
     .then(successStatus)
     .catch(internalServerError);
 }
+
+export function remove(user) {
+  return authService
+    .delete("/delete", {
+      headers: {
+        Authorization: USER_HELPERS.getUserToken(),
+      },
+      user,
+    })
+    .then(successStatus)
+    .catch(internalServerError);
+}
