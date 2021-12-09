@@ -10,7 +10,7 @@ function Game() {
 
   // const currentQuestion = JsQuestion.js[questionNumber];
   if (!currentQuestion) {
-    return <Navigate to={PATHS.LANDINGPAGE} replace />;
+    return <Navigate to={PATHS.LEADERBOARDS} replace />;
   }
 
   return (

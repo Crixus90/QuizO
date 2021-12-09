@@ -14,29 +14,29 @@ export default function GameWrapper({ children }) {
   const [questions, setQuestions] = useState(null);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
+  const [loading, setLoading] = useState(false);
 
-  const currentQuestion = category && questions?.[category]?.[questionNumber];
+  const currentQuestion = category && questions?.[questionNumber];
 
   useEffect(() => {
-    if (questionNumber != null && !currentQuestion && category) {
-      setQuestionNumber(0);
-      setCategory("");
-    }
+    // if (questionNumber != null && !currentQuestion && category) {
+    //   setQuestionNumber(0);
+    //   setCategory("");
+    // }
     if (!category) {
       return;
     }
 
     //get questions
-    getQuestions(category).then((questions) => {
-      setQuestions(questions);
-      console.log("these are the qs" + questions);
+    getQuestions(category).then((allQuestions) => {
+      console.log(allQuestions);
+      setQuestions(allQuestions.data.questions);
     });
     return () => {};
-  }, [currentQuestion, questionNumber, category]);
+  }, [questionNumber, category]);
 
-  console.log(category);
+  console.log(questions);
   console.log(currentQuestion);
-  console.log(questionNumber);
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
@@ -53,7 +53,7 @@ export default function GameWrapper({ children }) {
 
   function decideCategory(newCategory) {
     setCategory(newCategory);
-    //  setQuestionNumber(0)
+    console.log("categoryyyyy " + newCategory);
     navigate("/game");
   }
 

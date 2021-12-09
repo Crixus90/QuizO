@@ -7,9 +7,11 @@ const questionsServices = axios.create({
 });
 
 export function getQuestions(category) {
-  return questionsServices.get(`?category=${category}`).then((allQuestions) => {
-    return allQuestions;
-  });
+  return questionsServices
+    .get(`?category=${category}`)
+    .then((allQuestionsIncategory) => {
+      return allQuestionsIncategory;
+    });
 }
 
 export function createQuestions({
