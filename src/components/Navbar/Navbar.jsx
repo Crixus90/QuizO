@@ -6,7 +6,7 @@ import { useUser } from "../../Context/UserContext";
 const Navbar = () => {
   const { user, handleLogout } = useUser();
   return (
-    <nav>
+    <nav className="nav-container">
       <Link to={PATHS.LANDINGPAGE} className="nav__logo">
         QuizO
       </Link>

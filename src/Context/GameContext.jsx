@@ -14,7 +14,7 @@ export default function GameWrapper({ children }) {
   const [questions, setQuestions] = useState(null);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [gameLoading, setGameLoading] = useState(false);
 
   const currentQuestion = category && questions?.[questionNumber];
 
@@ -26,22 +26,18 @@ export default function GameWrapper({ children }) {
     if (!category) {
       return;
     }
+    setGameLoading(true);
 
     //get questions
     getQuestions(category).then((allQuestions) => {
-      console.log(allQuestions);
       setQuestions(allQuestions.data.questions);
+      setGameLoading(false);
     });
-    return () => {};
-  }, [questionNumber, category]);
-
-  console.log(questions);
-  console.log(currentQuestion);
+  }, [category]);
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
     setTimeout(() => {
-      console.log("Hello World!");
       setQuestionNumber(questionNumber + 1);
     }, 1);
 
@@ -53,7 +49,7 @@ export default function GameWrapper({ children }) {
 
   function decideCategory(newCategory) {
     setCategory(newCategory);
-    console.log("categoryyyyy " + newCategory);
+    setGameLoading(true);
     navigate("/game");
   }
 
@@ -66,6 +62,7 @@ export default function GameWrapper({ children }) {
         changeQuestion,
         decideCategory,
         currentQuestion,
+        gameLoading,
       }}
     >
       {children}

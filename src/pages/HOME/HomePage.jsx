@@ -13,7 +13,7 @@ function HomePage() {
           { title: "CSS", value: "css" },
           { title: "HTML", value: "html" },
         ].map((e) => (
-          <Category key={e.value} {...e} />
+          <Category key={e.value} {...e} className="category" />
         ))}
       </div>
     </div>
