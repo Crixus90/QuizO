@@ -9,16 +9,18 @@ function Question(props) {
     <div>
       <h2>{props.question}</h2>
       <div className="answers-container">
-        {listOfAnswers.map(([key, answer]) => {
-          function provideAnswer() {
-            changeQuestion(answer.isCorrect);
-          }
-          return (
-            <p key={key} onClick={provideAnswer}>
-              {answer.value}
-            </p>
-          );
-        })}
+        {listOfAnswers
+          .sort(() => Math.random() - 0.5)
+          .map(([key, answer]) => {
+            function provideAnswer() {
+              changeQuestion(answer.isCorrect);
+            }
+            return (
+              <p key={key} onClick={provideAnswer}>
+                {answer.value}
+              </p>
+            );
+          })}
       </div>
     </div>
   );
