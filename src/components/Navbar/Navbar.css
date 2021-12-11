@@ -1,5 +1,17 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav__authLinks {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 1em;
   position: sticky;
+}
+
+.nav__logo {
+  margin: 0 auto;
+  font-size: 3em;
+  color: var(--main-f-color);
 }

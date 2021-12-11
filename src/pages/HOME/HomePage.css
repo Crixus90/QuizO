@@ -1,6 +1,15 @@
 .cat-container {
+  margin: 10em;
   display: grid;
   place-items: center;
-  row-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.category {
+  padding: 2em;
+}
+
+.category:hover {
+  cursor: pointer;
 }

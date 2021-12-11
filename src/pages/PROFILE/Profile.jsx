@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import Signup from "../../pages/Signup";
 import "./Profile.css";
 import { remove } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
