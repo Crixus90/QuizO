@@ -1,8 +1,16 @@
+import React, { useEffect } from "react";
 import Category from "../../components/CATEGORIES/Category";
 import Navbar from "../../components/Navbar/Navbar";
+import { useGame } from "../../Context/GameContext";
 import "./HomePage.css";
 
 function HomePage() {
+  const { resetGame } = useGame();
+
+  useEffect(() => {
+    resetGame();
+  }, [resetGame]);
+
   return (
     <div className="home">
       <Navbar />

@@ -60,21 +60,18 @@ function Addquestions() {
       <form className="signup__form" onSubmit={handleFormSubmission}>
         <label htmlFor="input-category">Category:</label>
         <div className="input-category">
-          <input
-            id="input-category"
-            type="text"
+          <select
             name="category"
-            list="categories"
+            id="input-category"
             value={category}
             onChange={handleInputChange}
             required
-          />
-          <datalist id="categories">
-            <option>JS</option>
-            <option>CSS</option>
-            <option>HTML</option>
-            <option>REACT</option>
-          </datalist>
+          >
+            <option value="js">JS</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+            <option value="react">REACT</option>
+          </select>
         </div>
         <label htmlFor="input-question">Question</label>
         <input

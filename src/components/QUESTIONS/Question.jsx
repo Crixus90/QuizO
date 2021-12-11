@@ -2,11 +2,9 @@ import React from "react";
 import { useGame } from "../../Context/GameContext";
 
 function Question(props) {
-  console.log(props);
   const { changeQuestion } = useGame();
   const listOfAnswers = Object.entries(props.answer);
 
-  console.log(listOfAnswers);
   return (
     <div>
       <h2>{props.question}</h2>

@@ -1,4 +1,10 @@
-import React, { useContext, createContext, useState, useEffect } from "react";
+import React, {
+  useContext,
+  createContext,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import { useNavigate } from "react-router";
 import { getQuestions } from "../services/questionsService";
 
@@ -14,15 +20,16 @@ export default function GameWrapper({ children }) {
   const [questions, setQuestions] = useState(null);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
-  const [gameLoading, setGameLoading] = useState(false);
+  const [gameLoading, setGameLoading] = useState(null);
 
   const currentQuestion = category && questions?.[questionNumber];
 
+  const resetGame = useCallback(() => {
+    setCategory("");
+    setQuestionNumber(0);
+  }, []);
+
   useEffect(() => {
-    // if (questionNumber != null && !currentQuestion && category) {
-    //   setQuestionNumber(0);
-    //   setCategory("");
-    // }
     if (!category) {
       return;
     }
@@ -63,6 +70,7 @@ export default function GameWrapper({ children }) {
         decideCategory,
         currentQuestion,
         gameLoading,
+        resetGame,
       }}
     >
       {children}
