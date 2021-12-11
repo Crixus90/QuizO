@@ -1,5 +1,6 @@
 import React from "react";
 import { useGame } from "../../Context/GameContext";
+import "./Questions.css";
 
 function Question(props) {
   const { changeQuestion } = useGame();
@@ -13,10 +14,10 @@ function Question(props) {
           .sort(() => Math.random() - 0.5)
           .map(([key, answer]) => {
             function provideAnswer() {
-              changeQuestion(answer.isCorrect);
+              changeQuestion(answer.iscorrect);
             }
             return (
-              <p key={key} onClick={provideAnswer}>
+              <p key={key} onClick={provideAnswer} className="answer">
                 {answer.value}
               </p>
             );

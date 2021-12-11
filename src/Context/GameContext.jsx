@@ -7,6 +7,8 @@ import React, {
 } from "react";
 import { useNavigate } from "react-router";
 import { getQuestions } from "../services/questionsService";
+import { addPoints } from "../services/auth";
+import { useUser } from "../Context/UserContext";
 
 const GameContext = createContext();
 
@@ -15,6 +17,7 @@ export function useGame() {
 }
 
 export default function GameWrapper({ children }) {
+  const { user } = useUser();
   const navigate = useNavigate();
   const [category, setCategory] = useState(null);
   const [questions, setQuestions] = useState(null);
@@ -25,6 +28,7 @@ export default function GameWrapper({ children }) {
   const currentQuestion = category && questions?.[questionNumber];
 
   const resetGame = useCallback(() => {
+    console.log("reset game");
     setCategory("");
     setQuestionNumber(0);
   }, []);
@@ -44,14 +48,16 @@ export default function GameWrapper({ children }) {
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
-    setTimeout(() => {
-      setQuestionNumber(questionNumber + 1);
-    }, 1);
-
+    console.log("sucess??? ", success);
     if (success) {
       //!addPoints etc.
-      setPoints(points + 1);
+      console.log("points before", points);
+      setPoints(points + 10);
+      console.log("these are the points", points);
+
+      // addPoints({ user, points });
     }
+    setQuestionNumber(questionNumber + 1);
   }
 
   function decideCategory(newCategory) {

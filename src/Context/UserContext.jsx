@@ -44,7 +44,7 @@ export default function GlobalUserData({ children }) {
     setUser(user);
   }
 
-  function dieMotherfuckerDie() {
+  function removeUser() {
     setUser(null);
   }
 
@@ -55,7 +55,7 @@ export default function GlobalUserData({ children }) {
         authenticate,
         handleLogout,
         isLoading,
-        dieMotherfuckerDie,
+        removeUser,
       }}
     >
       {children}

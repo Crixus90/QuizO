@@ -8,11 +8,11 @@ import { useUser } from "../../Context/UserContext";
 function Profile({ handleLogout, user }) {
   let navigate = useNavigate();
 
-  const { dieMotherfuckerDie } = useUser();
+  const { removeUser } = useUser();
 
   function deleteAccount() {
     remove(user).then((serverResponse) => {
-      dieMotherfuckerDie();
+      removeUser();
       navigate("/auth/login");
       // if(serverResponse.status == false){
       // }

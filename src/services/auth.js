@@ -74,3 +74,16 @@ export function remove(user) {
     .then(successStatus)
     .catch(internalServerError);
 }
+
+export function addPoints(user, points) {
+  return authService
+    .post("/addpoints", {
+      headers: {
+        Authorization: USER_HELPERS.getUserToken(),
+      },
+      user,
+      points,
+    })
+    .then(successStatus)
+    .catch(internalServerError);
+}
