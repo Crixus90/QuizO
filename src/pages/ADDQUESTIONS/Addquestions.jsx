@@ -67,6 +67,9 @@ function Addquestions() {
             onChange={handleInputChange}
             required
           >
+            <option value="" selected disabled hidden>
+              Category
+            </option>
             <option value="js">JS</option>
             <option value="css">CSS</option>
             <option value="html">HTML</option>
