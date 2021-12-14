@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import { getUsers } from "../../services/leaderboard";
+import "./Leaderboard.css";
 
 function Leaderboard({ handleLogout, user }) {
   const [users, setUsers] = useState([]);
@@ -21,11 +22,23 @@ function Leaderboard({ handleLogout, user }) {
       <div className="test">
         {users.map((user) => {
           return (
-            <table key={user._id}>
-              <tr>
-                <td>{user.username}</td>
-                <td>{user.score}</td>
-              </tr>
+            // <table key={user._id}>
+            //   <tbody>
+            //     <tr>
+            //       <th>{user.country}</th>
+            //       <th>{user.name}</th>
+            //       <th>{user.score}</th>
+            //     </tr>
+            //   </tbody>
+            // </table>
+            <table key={user._id} className="table-main">
+              <tbody className="test">
+                <tr>
+                  <th>{user.country}</th>
+                  <td>{user.username}</td>
+                  <td>{user.score}</td>
+                </tr>
+              </tbody>
             </table>
           );
         })}

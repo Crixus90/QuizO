@@ -1,0 +1,23 @@
+.table-main {
+  background-color: white;
+  border-radius: 25px;
+  width: 40%;
+  border: 1px black;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px black;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+tr {
+}
