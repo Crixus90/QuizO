@@ -28,9 +28,9 @@ export default function GameWrapper({ children }) {
   const currentQuestion = category && questions?.[questionNumber];
 
   const resetGame = useCallback(() => {
-    console.log("reset game");
     setCategory("");
     setQuestionNumber(0);
+    setPoints(0);
   }, []);
 
   useEffect(() => {
@@ -48,17 +48,16 @@ export default function GameWrapper({ children }) {
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
-    console.log("sucess??? ", success);
     if (success) {
       //!addPoints etc.
-      console.log("points before", points);
+      // console.log("points before", points);
       setPoints(points + 10);
-      console.log("these are the points", points);
 
-      // addPoints({ user, points });
+      addPoints({ user, points });
     }
     setQuestionNumber(questionNumber + 1);
   }
+  console.log("these are the points", points);
 
   function decideCategory(newCategory) {
     setCategory(newCategory);
