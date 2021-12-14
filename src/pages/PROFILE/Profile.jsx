@@ -19,6 +19,8 @@ function Profile({ handleLogout, user }) {
     });
   }
 
+  //useEffect here
+
   return (
     <>
       <Navbar handleLogout={handleLogout} user={user} />

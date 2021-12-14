@@ -50,17 +50,26 @@ export default function GameWrapper({ children }) {
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
     setHasClicked(true);
-    setTimeout(() => {
-      if (success) {
-        //!addPoints etc.
-        // console.log("points before", points);
-        setPoints(points + 10);
+    if (hasClicked) {
+      setTimeout(() => {
+        if (success) {
+          //!addPoints etc.
+          // console.log("points before", points);
 
-        addPoints({ user, points });
-      }
-      setQuestionNumber(questionNumber + 1);
-      setHasClicked(false);
-    }, 2000);
+          // EXAMPLE, NOT NECESSARILY A REAL VALUE
+          // POINTS HERE ARE 110
+          const newPoints = points + 10;
+          setPoints(newPoints);
+          // WHAT IS THE VALUE OF POINTS HERE -> 110
+
+          addPoints({ user, points: newPoints }).then(() => {
+            console.log(`Horray!`);
+          });
+        }
+        setQuestionNumber(questionNumber + 1);
+        setHasClicked(false);
+      }, 2000);
+    }
   }
 
   function decideCategory(newCategory) {

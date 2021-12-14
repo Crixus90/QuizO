@@ -13,3 +13,7 @@
 .category:hover {
   cursor: pointer;
 }
+
+.icon {
+  size: 20;
+}

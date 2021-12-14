@@ -8,7 +8,7 @@ export default function GlobalUserData({ children }) {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  function fetchUserData() {
     const accessToken = USER_HELPERS.getUserToken();
     if (!accessToken) {
       return setIsLoading(false);
@@ -20,6 +20,10 @@ export default function GlobalUserData({ children }) {
       setUser(res.data.user);
       setIsLoading(false);
     });
+  }
+
+  useEffect(() => {
+    fetchUserData();
   }, []);
 
   function handleLogout() {
@@ -56,6 +60,7 @@ export default function GlobalUserData({ children }) {
         handleLogout,
         isLoading,
         removeUser,
+        fetchUserData,
       }}
     >
       {children}

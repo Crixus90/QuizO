@@ -13,7 +13,7 @@ function Category(props) {
         }
       }}
     >
-      <h2>{props.title}</h2>
+      <h2>{(props.title, props.logo)}</h2>
     </div>
   );
 }
