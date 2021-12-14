@@ -72,7 +72,7 @@ export default function Signup({ authenticate }) {
           />
 
           <label htmlFor="input-country">Country</label>
-          <input
+          <select
             id="input-country"
             type="text"
             list="countries"
@@ -80,8 +80,10 @@ export default function Signup({ authenticate }) {
             value={country}
             onChange={handleInputChange}
             required
-          />
-          <datalist id="countries">
+          >
+            <option value="" selected disabled hidden>
+              Country
+            </option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -338,7 +340,7 @@ export default function Signup({ authenticate }) {
             <option value="Zaire">Zaire</option>
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
-          </datalist>
+          </select>
 
           {error && (
             <div className="error-block">
