@@ -21,6 +21,7 @@ export default function GameWrapper({ children }) {
   const navigate = useNavigate();
   const [category, setCategory] = useState(null);
   const [questions, setQuestions] = useState(null);
+  const [hasClicked, setHasClicked] = useState(false);
   const [points, setPoints] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [gameLoading, setGameLoading] = useState(null);
@@ -48,16 +49,19 @@ export default function GameWrapper({ children }) {
 
   //! track if the user has clicked with state.
   function changeQuestion(success = false) {
-    if (success) {
-      //!addPoints etc.
-      // console.log("points before", points);
-      setPoints(points + 10);
+    setHasClicked(true);
+    setTimeout(() => {
+      if (success) {
+        //!addPoints etc.
+        // console.log("points before", points);
+        setPoints(points + 10);
 
-      addPoints({ user, points });
-    }
-    setQuestionNumber(questionNumber + 1);
+        addPoints({ user, points });
+      }
+      setQuestionNumber(questionNumber + 1);
+      setHasClicked(false);
+    }, 2000);
   }
-  console.log("these are the points", points);
 
   function decideCategory(newCategory) {
     setCategory(newCategory);
