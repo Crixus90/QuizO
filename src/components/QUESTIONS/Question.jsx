@@ -1,9 +1,10 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useGame } from "../../Context/GameContext";
 import "./Questions.css";
 
 function Question(props) {
   const { changeQuestion, questionNumber } = useGame();
+  const [hasClicked, setHasClicked] = useState(false);
 
   const listOfAnswers = Object.entries(props.answer);
 
@@ -12,7 +13,12 @@ function Question(props) {
       .sort(() => Math.random() - 0.5)
       .map(([key, answer]) => {
         function provideAnswer() {
-          changeQuestion(answer.iscorrect);
+          //! UseEffect to change the state of the boolean.
+          if (!hasClicked) {
+            setTimeout(() => {
+              changeQuestion(answer.iscorrect);
+            }, 2000);
+          }
         }
         return (
           <p key={key} onClick={provideAnswer} className="answer">
