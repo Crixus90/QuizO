@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 :root {
-  --main-f-color: rgb(255, 255, 255);
-  --sub-f-color: rgb(0, 0, 0);
+  --main-f-color: #ffffff;
+  --sub-f-color: #3e355d;
   --main-f-size: 2em;
+  --border-radius: 10px;
 }
 
 * {
@@ -13,10 +14,12 @@
 .app {
   color: var(--sub-f-color);
   font-family: "Fredoka One", cursive;
-  min-height: 100vh;
-  background: linear-gradient(-45deg, #261962, #cb00b9, #17199e);
+  height: 100vh;
+  width: 100vw;
+  background-color: #461a42;
+  /* background: linear-gradient(-45deg, #261962, #cb00b9, #17199e);
   background-size: 400% 400%;
-  animation: GradientLoop 10s ease infinite;
+  animation: GradientLoop 10s ease infinite; */
 }
 
 @keyframes GradientLoop {
@@ -33,5 +36,5 @@
 
 a {
   text-decoration: none;
-  color: var(--sub-f-color);
+  color: var(--main-f-color);
 }

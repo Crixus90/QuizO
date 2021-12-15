@@ -1,7 +1,7 @@
 .category {
   text-align: center;
   background-color: white;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
   width: 90%;
   max-width: 150px;
 }

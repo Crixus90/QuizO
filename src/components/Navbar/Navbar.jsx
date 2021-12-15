@@ -6,42 +6,30 @@ import { useUser } from "../../Context/UserContext";
 const Navbar = () => {
   const { user, handleLogout } = useUser();
   return (
-    <nav className="nav-container">
+    <header className="nav-container">
       <Link to={PATHS.LANDINGPAGE} className="nav__logo">
         QuizO
       </Link>
-      <div className="nav__authLinks">
-        <Link to={PATHS.LEADERBOARDS} className="nav__projectName">
-          Leaderboards
-        </Link>
-        {user ? (
-          <>
-            <Link to={PATHS.PROFILE} className="authLink">
-              Profile
-            </Link>
+      <nav>
+        <ul className="nav__authLinks">
+          <li>
+            <Link to={PATHS.LEADERBOARDS}>Leaderboards</Link>
+          </li>
+          <li>
+            <Link to={PATHS.PROFILE}>Profile</Link>
+          </li>
+          <li>
             <Link
               to={PATHS.LOGINPAGE}
-              className="authLink"
               onClick={handleLogout}
+              className="logout-btn"
             >
               Logout
             </Link>
-            {/* <button className="nav-logoutbtn" onClick={handleLogout}>
-              Logout
-            </button> */}
-          </>
-        ) : (
-          <>
-            <Link to={PATHS.SIGNUPPAGE} className="authLink">
-              Signup
-            </Link>
-            <Link to={PATHS.LOGINPAGE} className="authLink">
-              Log In
-            </Link>
-          </>
-        )}
-      </div>
-    </nav>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

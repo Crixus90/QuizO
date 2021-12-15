@@ -1,5 +1,4 @@
 .cat-container {
-  margin: 10em;
   display: grid;
   place-items: center;
   gap: 1rem;
