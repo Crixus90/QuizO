@@ -34,9 +34,9 @@ function Leaderboard({ handleLogout, user }) {
             <table key={user._id} className="table-main">
               <tbody className="test">
                 <tr>
-                  <th>{user.country}</th>
-                  <td>{user.username}</td>
-                  <td>{user.score}</td>
+                  <th className="th">{user.country}</th>
+                  <td className="th">{user.username}</td>
+                  <td className="th">{user.score}</td>
                 </tr>
               </tbody>
             </table>

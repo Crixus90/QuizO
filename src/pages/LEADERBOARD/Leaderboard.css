@@ -1,8 +1,8 @@
 .table-main {
   background-color: white;
-  border-radius: 25px;
-  width: 40%;
+  border-radius: 4%;
   border: 1px black;
+  width: 30%;
 }
 
 .test {
@@ -16,8 +16,12 @@
 
 th,
 td {
-  padding: 15px;
+  /* padding: 15px; */
+  text-align: center;
+  width: 75px;
+  margin: 5px;
 }
 
-tr {
+.th {
+  padding: 30px;
 }
