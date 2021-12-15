@@ -26,6 +26,7 @@ function Profile({ handleLogout, user }) {
       <Navbar handleLogout={handleLogout} user={user} />
       <div className="container-profile">
         <section className="profile-section">
+          {console.log(user)}
           <h1>Username: {user.username}</h1>
           <h1>Country: {user.country}</h1>
           <h1>Score: {user.score}</h1>
