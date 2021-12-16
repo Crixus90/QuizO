@@ -4,12 +4,12 @@ import "./Profile.css";
 import { remove } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../Context/UserContext";
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 
 function Profile({ handleLogout, user }) {
   let navigate = useNavigate();
 
-  const { removeUser, fetchUserData } = useUser();
+  const { removeUser } = useUser();
 
   function deleteAccount() {
     remove(user).then((serverResponse) => {
@@ -20,10 +20,10 @@ function Profile({ handleLogout, user }) {
     });
   }
 
-  //! not finished
-  useEffect(() => {
-    fetchUserData();
-  }, [fetchUserData]);
+  // //! not finished
+  // useEffect(() => {
+  //   fetchUserData();
+  // }, [fetchUserData]);
 
   return (
     <>
