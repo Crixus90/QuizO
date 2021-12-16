@@ -17,31 +17,27 @@ function Leaderboard({ handleLogout, user }) {
   }, []);
 
   return (
-    <>
+    <div>
       <Navbar handleLogout={handleLogout} user={user} />
-      <table className="content-table first-table">
-        <thead>
-          <tr className="table-rows">
+      <div className="leaderboard-container">
+        <table className="leaderboards">
+          <tr>
             <th>Country</th>
             <th>Username</th>
             <th>Score</th>
           </tr>
-        </thead>
-      </table>
-      {users.map((user) => {
-        return (
-          <table key={user._id} className="content-table">
-            <thead>
-              <tr className="table-rows">
-                <th>{user.country}</th>
-                <th>{user.username}</th>
-                <th>{user.score}</th>
+          {users.map((user) => {
+            return (
+              <tr>
+                <td>{user.country}</td>
+                <td>{user.username}</td>
+                <td>{user.score}</td>
               </tr>
-            </thead>
-          </table>
-        );
-      })}
-    </>
+            );
+          })}
+        </table>
+      </div>
+    </div>
   );
 }
 

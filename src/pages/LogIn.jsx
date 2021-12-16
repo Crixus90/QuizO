@@ -75,7 +75,9 @@ export default function LogIn({ authenticate }) {
             Submit
           </button>
         </form>
-        <Link to={PATHS.SIGNUPPAGE}>Signup</Link>
+        <Link to={PATHS.SIGNUPPAGE} className="change-link">
+          Signup
+        </Link>
       </div>
     </div>
   );

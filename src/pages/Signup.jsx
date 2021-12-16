@@ -81,9 +81,7 @@ export default function Signup({ authenticate }) {
             onChange={handleInputChange}
             required
           >
-            <option value="" selected disabled hidden>
-              Country
-            </option>
+            <option value="" selected disabled hidden></option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -353,7 +351,9 @@ export default function Signup({ authenticate }) {
             Submit
           </button>
         </form>
-        <Link to={PATHS.LOGINPAGE}>Log In</Link>
+        <Link to={PATHS.LOGINPAGE} className="change-link">
+          Log In
+        </Link>
       </div>
     </div>
   );

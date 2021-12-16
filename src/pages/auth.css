@@ -39,6 +39,13 @@
   border-radius: 25px;
   border: 1px solid #ccc;
 }
+input {
+  transition: transform 0.2s;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
 
 label {
   display: flex;
@@ -53,4 +60,19 @@ button[type="submit"] {
   border: 1px solid #ccc;
   background-size: 400% 400%;
   animation: GradientLoop 10s ease infinite;
+}
+
+.change-link {
+  color: var(--sub-f-color);
+}
+
+select {
+  font-family: "Fredoka One", cursive;
+  width: 70%;
+  height: 30px;
+  margin: 0.5em 0;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  text-align: center;
 }

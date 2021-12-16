@@ -4,7 +4,7 @@ import * as PATHS from "../../utils/paths";
 import { useUser } from "../../Context/UserContext";
 
 const Navbar = () => {
-  const { user, handleLogout } = useUser();
+  const { handleLogout } = useUser();
   return (
     <header className="nav-container">
       <Link to={PATHS.LANDINGPAGE} className="nav__logo">

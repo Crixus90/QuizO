@@ -17,9 +17,11 @@
 
 li {
   margin: 0.4em 1em;
+  transition: transform 0.2s;
 }
 
 li:hover {
+  transform: scale(1.2);
 }
 
 .logout-btn {
