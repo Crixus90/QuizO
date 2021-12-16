@@ -19,30 +19,28 @@ function Leaderboard({ handleLogout, user }) {
   return (
     <>
       <Navbar handleLogout={handleLogout} user={user} />
-      <div className="test">
-        {users.map((user) => {
-          return (
-            // <table key={user._id}>
-            //   <tbody>
-            //     <tr>
-            //       <th>{user.country}</th>
-            //       <th>{user.name}</th>
-            //       <th>{user.score}</th>
-            //     </tr>
-            //   </tbody>
-            // </table>
-            <table key={user._id} className="table-main">
-              <tbody className="test">
-                <tr>
-                  <th className="th">{user.country}</th>
-                  <td className="th">{user.username}</td>
-                  <td className="th">{user.score}</td>
-                </tr>
-              </tbody>
-            </table>
-          );
-        })}
-      </div>
+      <table className="content-table first-table">
+        <thead>
+          <tr className="table-rows">
+            <th>Country</th>
+            <th>Username</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+      </table>
+      {users.map((user) => {
+        return (
+          <table key={user._id} className="content-table">
+            <thead>
+              <tr className="table-rows">
+                <th>{user.country}</th>
+                <th>{user.username}</th>
+                <th>{user.score}</th>
+              </tr>
+            </thead>
+          </table>
+        );
+      })}
     </>
   );
 }
