@@ -1,17 +1,29 @@
 .leaderboard-container {
-  width: 50%;
+  width: 70%;
   margin: 2em auto;
-  border: 1px solid red;
 }
 
 .leaderboards {
+  width: 100%;
   margin: 0 auto;
+}
+.leaderboards tr {
+  background-color: white;
+}
+
+.leaderboards tr:nth-child(odd) {
+  background-color: #dbdbdb;
+}
+
+.leaderboards th {
+  background-color: transparent;
+  color: black;
 }
 
 .leaderboards td,
 th {
-  border: 1px solid #ddd;
+  /* border: 2px solid rgb(16, 80, 58); */
   padding: 8px;
-  color: var(--main-f-color);
+  color: var(--sub-f-color);
   text-align: center;
 }

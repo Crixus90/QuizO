@@ -127,7 +127,7 @@ export default function GameWrapper({ children }) {
       let points = gameState.points;
 
       if (success) {
-        points += 5;
+        points += 10;
 
         await addPoints({ user, points });
       }
@@ -138,7 +138,6 @@ export default function GameWrapper({ children }) {
     },
     [gameState.points, user]
   );
-  console.log(gameState);
   // async function changeQuestion(success = false) {
   //   console.log("TRYING TO CLICK", hasClicked);
   //   if (hasClicked) {
@@ -184,6 +183,6 @@ export default function GameWrapper({ children }) {
   );
 }
 
-function waitSomeTime(time = 2000) {
+function waitSomeTime(time = 1000) {
   return new Promise((r) => setTimeout(r, time));
 }

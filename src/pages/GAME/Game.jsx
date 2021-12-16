@@ -6,6 +6,7 @@ import * as PATHS from "../../utils/paths";
 import { useGame } from "../../Context/GameContext";
 import LoadingComponent from "../../components/Loading";
 import { useEffect } from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Game() {
   const { currentQuestion, gameLoading, stopLoading, resetGame } = useGame();
@@ -30,6 +31,7 @@ function Game() {
 
   return (
     <div>
+      <Navbar />
       <Question {...currentQuestion} />
     </div>
   );

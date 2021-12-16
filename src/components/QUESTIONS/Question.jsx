@@ -12,7 +12,6 @@ function Question(props) {
       .sort(() => Math.random() - 0.5)
       .map(([key, answer]) => {
         function provideAnswer() {
-          //! UseEffect to change the state of the boolean.
           changeQuestion(answer.iscorrect);
         }
         return (
@@ -25,23 +24,9 @@ function Question(props) {
   }, [questionNumber]);
 
   return (
-    <div>
-      <h2>{props.question}</h2>
-      <div className="answers-container">
-        {listSorted}
-        {/* {listOfAnswers
-          .sort(() => Math.random() - 0.5)
-          .map(([key, answer]) => {
-            function provideAnswer() {
-              changeQuestion(answer.iscorrect);
-            }
-            return (
-              <p key={key} onClick={provideAnswer} className="answer">
-                {answer.value}
-              </p>
-            );
-          })} */}
-      </div>
+    <div className="question-container">
+      <h2 className="question">{props.question}</h2>
+      <div className="answers-container">{listSorted}</div>
     </div>
   );
 }
