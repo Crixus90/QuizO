@@ -1,7 +1,7 @@
 .home-wrapper {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 90%;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 3em auto;
   text-align: center;
 }
@@ -12,10 +12,19 @@
 }
 
 .categories {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4em;
-  font-size: 2rem;
+  border: 1px solid red;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.category {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1em;
+  font-size: clamp(1rem, 6vw, 2rem);
 }

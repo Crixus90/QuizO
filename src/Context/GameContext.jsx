@@ -162,6 +162,6 @@ export default function GameWrapper({ children }) {
   );
 }
 
-function waitSomeTime(time = 1000) {
+function waitSomeTime(time = 500) {
   return new Promise((r) => setTimeout(r, time));
 }
