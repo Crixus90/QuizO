@@ -4,7 +4,7 @@ import "./Profile.css";
 import { remove } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../Context/UserContext";
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 
 function Profile({ handleLogout, user }) {
   let navigate = useNavigate();
@@ -18,13 +18,14 @@ function Profile({ handleLogout, user }) {
     });
   }
 
-  useEffect(() => {
-    fetchUserData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <>
+      {fetchUserData()}
       <Navbar handleLogout={handleLogout} user={user} />
       <div className="container-profile">
         {console.log(user)}
