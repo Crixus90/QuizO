@@ -9,7 +9,13 @@ import { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 
 function Game() {
-  const { currentQuestion, gameLoading, stopLoading, resetGame } = useGame();
+  const {
+    currentQuestion,
+    gameLoading,
+    stopLoading,
+    resetGame,
+    questionNumber,
+  } = useGame();
 
   useEffect(() => {
     // when the compoent gets added to the VIRTUAL DOM - tell it to stopLoading
@@ -32,7 +38,11 @@ function Game() {
   return (
     <div>
       <Navbar />
+      <div className="answer-status">
+        <h1 className="show-status">Correct! ✔️</h1>
+      </div>
       <Question {...currentQuestion} />
+      <h2>{questionNumber + 1}</h2>
     </div>
   );
 }

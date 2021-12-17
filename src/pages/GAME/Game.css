@@ -1,0 +1,27 @@
+.answer-status {
+  border: 1px solid red;
+  width: 70%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.answer-status h1 {
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 3rem);
+  color: var(--main-f-color);
+  transform: scale(0);
+}
+
+.show-status {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

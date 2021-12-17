@@ -114,7 +114,6 @@ export default function GameWrapper({ children }) {
     });
   }, [gameState.category]);
 
-  //! track if the user has clicked with state.
   const changeQuestion = useCallback(
     async (success = false) => {
       if (clicked.current) {
@@ -138,26 +137,6 @@ export default function GameWrapper({ children }) {
     },
     [gameState.points, user]
   );
-  // async function changeQuestion(success = false) {
-  //   console.log("TRYING TO CLICK", hasClicked);
-  //   if (hasClicked) {
-  //     return;
-  //   }
-
-  //   setHasClicked(true);
-  //   if (success) {
-  //     //!addPoints etc.
-
-  //     const newPoints = points + 5;
-  //     setPoints(newPoints);
-
-  //     await addPoints({ user, points: newPoints });
-  //   }
-  //   await waitSomeTime();
-  //   changeQuestionNumber();
-  // }
-
-  //  console.log(hasClicked);
 
   const decideCategory = useCallback(
     (newCategory) => {
