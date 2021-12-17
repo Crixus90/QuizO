@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <div className="home">
       <Navbar />
-      <div className="cat-container">
+      <div className="home-wrapper">
         <h1 className="category-title">Categories</h1>
         <div className="categories">
           {[

@@ -1,5 +1,5 @@
 .answer-status {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 70%;
   margin: 2em auto;
   text-align: center;
@@ -24,4 +24,12 @@
   100% {
     transform: scale(1);
   }
+}
+
+.question-number {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3em;
+  color: var(--main-f-color);
 }

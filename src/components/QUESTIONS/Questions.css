@@ -1,17 +1,18 @@
 .question-container {
   width: 90%;
   max-width: 800px;
-  margin: 2em auto;
+  margin: 0 auto;
   padding: 2em;
   text-align: center;
   /* font-size: 2.5em; */
   font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.5rem);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .question {
   color: var(--main-f-color);
-  margin: 1em 0;
+  margin: 0.5em auto;
+  padding-bottom: 2em;
 }
 
 .answer {
@@ -23,7 +24,7 @@
 
 .answer:hover {
   cursor: pointer;
-  transform: scaleY();
+  transform: scaleY(1.1);
 }
 
 .answers-container {

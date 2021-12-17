@@ -39,10 +39,10 @@ function Game() {
     <div>
       <Navbar />
       <div className="answer-status">
-        <h1 className="show-status">Correct! ✔️</h1>
+        <h1 id="add-class">Correct! ✔️</h1>
       </div>
+      <h2 className="question-number">{questionNumber + 1}</h2>
       <Question {...currentQuestion} />
-      <h2>{questionNumber + 1}</h2>
     </div>
   );
 }

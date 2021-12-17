@@ -1,7 +1,13 @@
 .category {
   text-align: center;
-  background-color: rgb(78, 78, 78);
+  background-color: rgb(255, 255, 255);
   border-radius: var(--border-radius);
-  width: 90%;
-  max-width: 150px;
+  padding: 2em;
+  margin: 0 1em;
+  transition: transform 0.2s;
+}
+
+.category:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
