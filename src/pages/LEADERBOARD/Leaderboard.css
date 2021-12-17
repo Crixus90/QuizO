@@ -22,7 +22,7 @@
 
 .leaderboards td,
 th {
-  /* border: 2px solid rgb(16, 80, 58); */
+  border: 2px solid rgb(83, 83, 83);
   padding: 8px;
   color: var(--sub-f-color);
   text-align: center;
