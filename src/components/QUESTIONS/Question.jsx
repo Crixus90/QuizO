@@ -15,9 +15,9 @@ function Question(props) {
           changeQuestion(answer.iscorrect);
         }
         return (
-          <p key={key} onClick={provideAnswer} className="answer">
-            {answer.value}
-          </p>
+          <div key={key} onClick={provideAnswer} className="answer">
+            <p>{answer.value}</p>
+          </div>
         );
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps

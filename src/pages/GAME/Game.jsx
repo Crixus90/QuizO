@@ -38,9 +38,6 @@ function Game() {
   return (
     <div>
       <Navbar />
-      <div className="answer-status">
-        <h1 id="add-class">Correct! ✔️</h1>
-      </div>
       <h2 className="question-number">{questionNumber + 1}</h2>
       <Question {...currentQuestion} />
     </div>

@@ -5,7 +5,7 @@
   padding: 2em;
   text-align: center;
   /* font-size: 2.5em; */
-  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.5rem);
+  font-size: clamp(1rem, 6vw, 2rem);
   /* border: 1px solid red; */
 }
 
@@ -16,10 +16,15 @@
 }
 
 .answer {
+  width: 90%;
+  margin: 0 auto;
   background-color: white;
   color: var(--sub-f-color);
   border-radius: var(--border-radius);
   transition: transform 0.2s;
+  padding: 1em;
+  font-size: clamp(0.5rem, 5vw, 4rem);
+  font-family: "Fredoka One", cursive;
 }
 
 .answer:hover {
