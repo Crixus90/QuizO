@@ -27,9 +27,12 @@ function Profile({ handleLogout, user }) {
       <div className="container-profile">
         <section className="profile-section">
           {console.log(user)}
-          <h1>Username: {user.username}</h1>
-          <h1>Country: {user.country}</h1>
-          <h1>Score: {user.score}</h1>
+          <h1>USERNAME</h1>
+          <h2>{user.username}</h2>
+          <h1>COUNTRY</h1>
+          <h2>{user.country}</h2>
+          <h1>SCORE</h1>
+          <h2>{user.score}</h2>
           <button
             className="button__submit"
             type="submit"
